@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 public interface ControllerInterface<T> {
-    @GetMapping
+    @GetMapping("/all")
     List<T> getAll();
 
     @GetMapping("/{id}")

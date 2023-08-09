@@ -16,7 +16,7 @@ import java.util.List;
 @Entity(name = "movies")
 public class Movie {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String title;
@@ -30,6 +30,7 @@ public class Movie {
     private String director;
     private double duration;
     private String language;
+    @Column(columnDefinition = "text")
     private String description;
     @JsonIgnore
     @Lob

@@ -58,11 +58,18 @@ public class MovieController implements ControllerInterface<Movie> {
         byte[] imageBytes = service.getMovieImage(movieId);
         return ResponseEntity.ok().contentType(MediaType.IMAGE_JPEG).body(imageBytes);
     }
-    @GetMapping("/page")
-    public ResponseEntity<List<Movie>> getAllByPagination(@RequestParam(defaultValue = "0") int page,
+    @GetMapping
+    public ResponseEntity<Page<Movie>> getAllByPagination(@RequestParam(defaultValue = "0") int page,
                                               @RequestParam(defaultValue = "20") int size) {
         Pageable pageable = PageRequest.of(page, size);
         Page<Movie> moviesPage = service.getAll(pageable);
-        return ResponseEntity.ok(moviesPage.getContent());
+        return ResponseEntity.ok(moviesPage);
+    }
+    @GetMapping("/searchByTitle")
+    public ResponseEntity<Page<Movie>> getByTitleContaining(@RequestParam("title") String title, @RequestParam(defaultValue = "0") int page,
+                                            @RequestParam(defaultValue = "20") int size){
+        Pageable pageable = PageRequest.of(page, size);
+        Page<Movie> moviesPage = service.findByTitleContaining(title,pageable);
+        return ResponseEntity.ok(moviesPage);
     }
 }

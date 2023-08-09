@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 
 @ControllerAdvice
 public class DefaultExceptionHandler {
-    @ExceptionHandler(MovieNotFoundException.class)
+    @ExceptionHandler({MovieNotFoundException.class})
     public ResponseEntity<ApiError> handleException(RuntimeException e, HttpServletRequest request){
         ApiError apiError = new ApiError(
                 request.getRequestURI(),

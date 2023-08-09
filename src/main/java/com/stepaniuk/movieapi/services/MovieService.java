@@ -14,23 +14,23 @@ import java.util.List;
 @Service
 @AllArgsConstructor
 public class MovieService implements ServiceInterface<Movie> {
-    private final MovieRepository repository;
+    private final MovieRepository movieRepository;
     @Override
     public void save(Movie movie) {
-        repository.save(movie);
+        movieRepository.save(movie);
     }
 
     @Override
     public List<Movie> getAll() {
-        return repository.findAll();
+        return movieRepository.findAll();
     }
     public Page<Movie> getAll(Pageable pageable) {
-        return repository.findAll(pageable);
+        return movieRepository.findAll(pageable);
     }
 
     @Override
     public void delete(Movie movie) {
-        repository.delete(movie);
+        movieRepository.delete(movie);
     }
 
     @Override
@@ -40,16 +40,25 @@ public class MovieService implements ServiceInterface<Movie> {
 
     @Override
     public Movie getById(Long id) {
-        return repository.findById(id).orElseThrow(MovieNotFoundException::new);
+        return movieRepository.findById(id).orElseThrow(MovieNotFoundException::new);
     }
     public void uploadMovieImage(Long movieId, byte[] image) {
         Movie movie = getById(movieId);
+
         movie.setImage(image);
-        repository.save(movie);
+        movieRepository.save(movie);
     }
 
     public byte[] getMovieImage(Long movieId) {
         Movie movie = getById(movieId);
-        return movie.getImage();
+        byte[] image = movie.getImage();
+        if(image.length==0){
+            throw new MovieNotFoundException();
+        }
+        return image;
+    }
+
+    public Page<Movie> findByTitleContaining(String title, Pageable pageable){
+        return movieRepository.findByTitleContaining(title, pageable);
     }
 }
