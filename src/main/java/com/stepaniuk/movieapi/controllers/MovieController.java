@@ -1,5 +1,6 @@
 package com.stepaniuk.movieapi.controllers;
 
+import com.stepaniuk.movieapi.entitys.Genre;
 import com.stepaniuk.movieapi.entitys.Movie;
 import com.stepaniuk.movieapi.interfaces.ControllerInterface;
 import com.stepaniuk.movieapi.services.MovieService;
@@ -60,16 +61,23 @@ public class MovieController implements ControllerInterface<Movie> {
     }
     @GetMapping
     public ResponseEntity<Page<Movie>> getAllByPagination(@RequestParam(defaultValue = "0") int page,
-                                              @RequestParam(defaultValue = "20") int size) {
+                                              @RequestParam(defaultValue = "5") int size) {
         Pageable pageable = PageRequest.of(page, size);
         Page<Movie> moviesPage = service.getAll(pageable);
         return ResponseEntity.ok(moviesPage);
     }
-    @GetMapping("/searchByTitle")
+    @GetMapping("/title")
     public ResponseEntity<Page<Movie>> getByTitleContaining(@RequestParam("title") String title, @RequestParam(defaultValue = "0") int page,
-                                            @RequestParam(defaultValue = "20") int size){
+                                            @RequestParam(defaultValue = "5") int size){
         Pageable pageable = PageRequest.of(page, size);
         Page<Movie> moviesPage = service.findByTitleContaining(title,pageable);
+        return ResponseEntity.ok(moviesPage);
+    }
+    @GetMapping("/genre")
+    public ResponseEntity<Page<Movie>> getByGenres(@RequestParam("genre") Genre genre, @RequestParam(defaultValue = "0") int page,
+                                                   @RequestParam(defaultValue = "5") int size){
+        Pageable pageable = PageRequest.of(page, size);
+        Page<Movie> moviesPage = service.findByGenres(genre,pageable);
         return ResponseEntity.ok(moviesPage);
     }
 }

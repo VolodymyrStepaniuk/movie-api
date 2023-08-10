@@ -1,5 +1,6 @@
 package com.stepaniuk.movieapi.services;
 
+import com.stepaniuk.movieapi.entitys.Genre;
 import com.stepaniuk.movieapi.entitys.Movie;
 import com.stepaniuk.movieapi.exceptions.MovieNotFoundException;
 import com.stepaniuk.movieapi.interfaces.ServiceInterface;
@@ -60,5 +61,8 @@ public class MovieService implements ServiceInterface<Movie> {
 
     public Page<Movie> findByTitleContaining(String title, Pageable pageable){
         return movieRepository.findByTitleContaining(title, pageable);
+    }
+    public Page<Movie> findByGenres(Genre genre, Pageable pageable){
+        return movieRepository.findByGenre(genre, pageable);
     }
 }
