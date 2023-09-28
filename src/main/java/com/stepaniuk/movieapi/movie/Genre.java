@@ -1,4 +1,4 @@
-package com.stepaniuk.movieapi.entitys;
+package com.stepaniuk.movieapi.movie;
 
 public enum Genre {
     COMEDY,FANTASY,HORRORS,
