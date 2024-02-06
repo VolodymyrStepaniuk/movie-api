@@ -1,12 +1,15 @@
 package com.stepaniuk.movieapi.movie;
 
+import com.stepaniuk.movieapi.country.CountryMapper;
+import com.stepaniuk.movieapi.director.DirectorMapper;
+import com.stepaniuk.movieapi.genre.GenreMapper;
 import com.stepaniuk.movieapi.movie.payload.response.MovieResponse;
-import com.stepaniuk.movieapi.shared.InstantMapper;
 import org.mapstruct.InjectionStrategy;
 import org.mapstruct.Mapper;
 
-@Mapper(componentModel = "spring", injectionStrategy = InjectionStrategy.CONSTRUCTOR, uses = {InstantMapper.class})
+@Mapper(componentModel = "spring", injectionStrategy = InjectionStrategy.CONSTRUCTOR, uses = {
+    CountryMapper.class, DirectorMapper.class, GenreMapper.class})
 public interface MovieMapper {
 
-    MovieResponse toResponse(Movie movie);
+  MovieResponse toResponse(Movie movie);
 }
