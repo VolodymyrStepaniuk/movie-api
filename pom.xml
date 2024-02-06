@@ -69,6 +69,14 @@
             <artifactId>mapstruct</artifactId>
             <version>1.5.5.Final</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/io.hypersistence/hypersistence-utils-hibernate-62 -->
+        <dependency>
+            <groupId>io.hypersistence</groupId>
+            <artifactId>hypersistence-utils-hibernate-62</artifactId>
+            <version>3.7.0</version>
+        </dependency>
+
     </dependencies>
 
     <build>
