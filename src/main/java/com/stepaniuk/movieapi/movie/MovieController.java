@@ -1,7 +1,7 @@
 package com.stepaniuk.movieapi.movie;
 
-import com.stepaniuk.movieapi.movie.payload.request.CreateMovieRequest;
-import com.stepaniuk.movieapi.movie.payload.response.MovieResponse;
+import com.stepaniuk.movieapi.movie.payload.CreateMovieRequest;
+import com.stepaniuk.movieapi.movie.payload.MovieResponse;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;

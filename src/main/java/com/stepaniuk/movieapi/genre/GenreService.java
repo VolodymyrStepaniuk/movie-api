@@ -1,7 +1,7 @@
 package com.stepaniuk.movieapi.genre;
 
 import com.stepaniuk.movieapi.exceptions.genre.GenreNotFoundException;
-import com.stepaniuk.movieapi.genre.payload.response.GenreResponse;
+import com.stepaniuk.movieapi.genre.payload.GenreResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

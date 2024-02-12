@@ -1,7 +1,7 @@
 package com.stepaniuk.movieapi.review;
 
-import com.stepaniuk.movieapi.review.payload.request.CreateReviewRequest;
-import com.stepaniuk.movieapi.review.payload.response.ReviewResponse;
+import com.stepaniuk.movieapi.review.payload.CreateReviewRequest;
+import com.stepaniuk.movieapi.review.payload.ReviewResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

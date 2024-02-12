@@ -1,7 +1,7 @@
 package com.stepaniuk.movieapi.director;
 
-import com.stepaniuk.movieapi.director.payload.request.CreateDirectorRequest;
-import com.stepaniuk.movieapi.director.payload.response.DirectorResponse;
+import com.stepaniuk.movieapi.director.payload.CreateDirectorRequest;
+import com.stepaniuk.movieapi.director.payload.DirectorResponse;
 import com.stepaniuk.movieapi.exceptions.country.CountryNotFoundException;
 import com.stepaniuk.movieapi.exceptions.director.DirectorNotFoundException;
 import com.stepaniuk.movieapi.country.CountryRepository;

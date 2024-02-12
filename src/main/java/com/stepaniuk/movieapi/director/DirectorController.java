@@ -1,7 +1,7 @@
 package com.stepaniuk.movieapi.director;
 
-import com.stepaniuk.movieapi.director.payload.request.CreateDirectorRequest;
-import com.stepaniuk.movieapi.director.payload.response.DirectorResponse;
+import com.stepaniuk.movieapi.director.payload.CreateDirectorRequest;
+import com.stepaniuk.movieapi.director.payload.DirectorResponse;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
