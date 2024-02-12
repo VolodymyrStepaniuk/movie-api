@@ -1,6 +1,6 @@
 package com.stepaniuk.movieapi.genre;
 
-import com.stepaniuk.movieapi.genre.payload.response.GenreResponse;
+import com.stepaniuk.movieapi.genre.payload.GenreResponse;
 import com.stepaniuk.movieapi.shared.InstantMapper;
 import org.mapstruct.InjectionStrategy;
 import org.mapstruct.Mapper;

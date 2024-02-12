@@ -1,4 +1,4 @@
-package com.stepaniuk.movieapi.review.payload.response;
+package com.stepaniuk.movieapi.review.payload;
 
 import jakarta.validation.constraints.NotNull;
 import java.time.Instant;

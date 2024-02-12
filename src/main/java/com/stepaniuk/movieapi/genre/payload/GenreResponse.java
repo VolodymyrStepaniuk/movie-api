@@ -1,4 +1,4 @@
-package com.stepaniuk.movieapi.genre.payload.response;
+package com.stepaniuk.movieapi.genre.payload;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;

@@ -1,8 +1,8 @@
-package com.stepaniuk.movieapi.movie.payload.response;
+package com.stepaniuk.movieapi.movie.payload;
 
-import com.stepaniuk.movieapi.country.payload.response.CountryResponse;
-import com.stepaniuk.movieapi.director.payload.response.DirectorResponse;
-import com.stepaniuk.movieapi.genre.payload.response.GenreResponse;
+import com.stepaniuk.movieapi.country.payload.CountryResponse;
+import com.stepaniuk.movieapi.director.payload.DirectorResponse;
+import com.stepaniuk.movieapi.genre.payload.GenreResponse;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import java.time.Duration;

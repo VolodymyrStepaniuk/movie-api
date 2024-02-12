@@ -1,4 +1,4 @@
-package com.stepaniuk.movieapi.movie.payload.request;
+package com.stepaniuk.movieapi.movie.payload;
 
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;

@@ -1,4 +1,4 @@
-package com.stepaniuk.movieapi.review.payload.request;
+package com.stepaniuk.movieapi.country.payload;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
@@ -10,11 +10,13 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 @EqualsAndHashCode
-public class CreateReviewRequest {
+public class CountryResponse {
+
   @NotNull
-  private Long movieId;
-  private Long userId;
+  private Long id;
   @NotNull
-  private Double rating;
-  private String comment;
+  private String name;
+  @NotNull
+  private String imageUrl;
 }
+

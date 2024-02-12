@@ -1,4 +1,4 @@
-package com.stepaniuk.movieapi.director.payload.request;
+package com.stepaniuk.movieapi.director.payload;
 
 import jakarta.validation.constraints.NotNull;
 import java.time.LocalDate;

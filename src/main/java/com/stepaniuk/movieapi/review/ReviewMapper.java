@@ -1,6 +1,6 @@
 package com.stepaniuk.movieapi.review;
 
-import com.stepaniuk.movieapi.review.payload.response.ReviewResponse;
+import com.stepaniuk.movieapi.review.payload.ReviewResponse;
 import org.mapstruct.InjectionStrategy;
 import org.mapstruct.Mapper;
 

@@ -1,6 +1,6 @@
-package com.stepaniuk.movieapi.director.payload.response;
+package com.stepaniuk.movieapi.director.payload;
 
-import com.stepaniuk.movieapi.country.payload.response.CountryResponse;
+import com.stepaniuk.movieapi.country.payload.CountryResponse;
 import jakarta.validation.constraints.NotNull;
 import java.time.LocalDate;
 import java.util.List;

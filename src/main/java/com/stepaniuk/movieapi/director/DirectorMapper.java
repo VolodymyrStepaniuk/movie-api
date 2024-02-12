@@ -1,7 +1,7 @@
 package com.stepaniuk.movieapi.director;
 
 import com.stepaniuk.movieapi.country.CountryMapper;
-import com.stepaniuk.movieapi.director.payload.response.DirectorResponse;
+import com.stepaniuk.movieapi.director.payload.DirectorResponse;
 import org.mapstruct.InjectionStrategy;
 import org.mapstruct.Mapper;
 
